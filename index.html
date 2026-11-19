@@ -117,6 +117,20 @@
     }
 
 
+
+    document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowRight") {
+        moveRight();
+    } else if (event.key === "ArrowLeft") {
+        moveLeft();
+    } else if (event.key === "ArrowUp") {
+        moveUp();
+    } else if (event.key === "ArrowDown") {
+        moveDown();
+    }
+    });
+
+
     renderAgent();
 
     
