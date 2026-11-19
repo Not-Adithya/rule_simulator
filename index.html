@@ -46,6 +46,14 @@
     );
 
     agentCell.style.backgroundColor = "red";
+
+
+
+    let environmentObjects = [
+    { x: 3, y: 5, type: "obstacle" },
+    { x: 7, y: 2, type: "food" },
+    { x: 4, y: 8, type: "obstacle" }
+    ];
     function moveRight() {
     if (agent.x < 9) {
         agent.x = agent.x + 1;
