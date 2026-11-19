@@ -73,6 +73,18 @@
     agent.y = newY;
     agent.energy--;
 
+
+    const foodIndex = environmentObjects.findIndex(object =>
+    object.x === agent.x &&
+    object.y === agent.y &&
+    object.type === "food"
+    );
+
+    if (foodIndex !== -1) {
+    agent.energy = Math.min(100, agent.energy + 20);
+    environmentObjects.splice(foodIndex, 1);
+    }
+
     renderAgent();
     }
 
