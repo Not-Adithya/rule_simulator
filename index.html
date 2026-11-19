@@ -89,6 +89,18 @@
         cell.style.backgroundColor = "";
     });
 
+    for (const object of environmentObjects) {
+    const cell = document.querySelector(
+        `[data-x="${object.x}"][data-y="${object.y}"]`
+    );
+
+    if (object.type === "obstacle") {
+        cell.style.backgroundColor = "gray";
+    } else if (object.type === "food") {
+        cell.style.backgroundColor = "green";
+    }
+    }
+
     const agentCell = document.querySelector(
         `[data-x="${agent.x}"][data-y="${agent.y}"]`
     );
