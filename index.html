@@ -34,6 +34,8 @@
     for (let i = 0; i < 100; i++) {
     const cell = document.createElement("div");
     grid.appendChild(cell);
+    cell.dataset.x = i % 10;
+    cell.dataset.y = Math.floor(i / 10);
     } 
    
     </script>
