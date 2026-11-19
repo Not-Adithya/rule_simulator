@@ -55,6 +55,26 @@
     { x: 7, y: 2, type: "food" },
     { x: 4, y: 8, type: "obstacle" }
     ];
+
+    function moveAgent(dx, dy) {
+    const newX = agent.x + dx;
+    const newY = agent.y + dy;
+
+    if (
+        newX < 0 || newX > 9 ||
+        newY < 0 || newY > 9 ||
+        isBlocked(newX, newY) ||
+        agent.energy <= 0
+    ) {
+        return;
+    }
+
+    agent.x = newX;
+    agent.y = newY;
+    agent.energy--;
+
+    renderAgent();
+    }
     function moveRight() {
     if (agent.x < 9 && !isBlocked(agent.x + 1, agent.y)) {
         agent.x++;
