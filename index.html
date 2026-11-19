@@ -36,7 +36,12 @@
     grid.appendChild(cell);
     cell.dataset.x = i % 10;
     cell.dataset.y = Math.floor(i / 10);
-    } 
+    }
+    const agentCell = document.querySelector(
+    `[data-x="${agent.x}"][data-y="${agent.y}"]`
+    );
+
+    agentCell.style.backgroundColor = "red";
    
     </script>
 
