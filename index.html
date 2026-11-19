@@ -44,8 +44,10 @@
 
     agentCell.style.backgroundColor = "red";
     function moveRight() {
-    agent.x = agent.x + 1;
-    renderAgent();
+    if (agent.x < 9) {
+        agent.x = agent.x + 1;
+        renderAgent();
+    }
     }
         
     
