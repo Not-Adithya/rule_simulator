@@ -107,6 +107,14 @@
 
     agentCell.style.backgroundColor = "red";
     }
+        
+    function isBlocked(x, y) {
+    return environmentObjects.some(object =>
+        object.x === x &&
+        object.y === y &&
+        object.type === "obstacle"
+    );
+    }
 
 
     renderAgent();
