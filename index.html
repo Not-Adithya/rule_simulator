@@ -44,6 +44,19 @@
     agentCell.style.backgroundColor = "red";
     function moveRight() {
     agent.x = agent.x + 1;
+    
+    
+    function renderAgent() {
+    document.querySelectorAll("#grid div").forEach(cell => {
+        cell.style.backgroundColor = "";
+    });
+
+    const agentCell = document.querySelector(
+        `[data-x="${agent.x}"][data-y="${agent.y}"]`
+    );
+
+    agentCell.style.backgroundColor = "red";
+    }
     }
    
     </script>
