@@ -25,16 +25,17 @@
     <p>Our simulation environment will be built here.</p>
     <div id="grid"></div>
     <script>
+    let agent = {
+    x: 0,
+    y: 0
+    };
     const grid = document.getElementById("grid");
 
     for (let i = 0; i < 100; i++) {
     const cell = document.createElement("div");
     grid.appendChild(cell);
     } 
-    let agent = {
-    x: 0,
-    y: 0
-    };
+   
     </script>
 
 </body>
