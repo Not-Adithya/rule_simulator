@@ -49,6 +49,27 @@
         renderAgent();
     }
     }
+
+    function moveLeft() {
+    if (agent.x > 0) {
+        agent.x--;
+        renderAgent();
+    }
+    }
+
+    function moveUp() {
+    if (agent.y > 0) {
+        agent.y--;
+        renderAgent();
+    }
+    }
+
+    function moveDown() {
+    if (agent.y < 9) {
+        agent.y++;
+        renderAgent();
+    }
+    }
         
     
     
