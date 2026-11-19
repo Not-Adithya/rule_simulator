@@ -55,28 +55,28 @@
     { x: 4, y: 8, type: "obstacle" }
     ];
     function moveRight() {
-    if (agent.x < 9) {
-        agent.x = agent.x + 1;
+    if (agent.x < 9 && !isBlocked(agent.x + 1, agent.y)) {
+        agent.x++;
         renderAgent();
     }
     }
 
     function moveLeft() {
-    if (agent.x > 0) {
+    if (agent.x > 0 && !isBlocked(agent.x - 1, agent.y)) {
         agent.x--;
         renderAgent();
     }
     }
 
     function moveUp() {
-    if (agent.y > 0) {
+    if (agent.y > 0 && !isBlocked(agent.x, agent.y - 1)) {
         agent.y--;
         renderAgent();
     }
     }
 
     function moveDown() {
-    if (agent.y < 9) {
+    if (agent.y < 9 && !isBlocked(agent.x, agent.y + 1)) {
         agent.y++;
         renderAgent();
     }
